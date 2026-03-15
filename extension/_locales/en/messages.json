@@ -1,0 +1,50 @@
+{
+  "extension_name": {
+    "message": "X Account Redirect Preventer"
+  },
+  "extension_description": {
+    "message": "Prevents X (Twitter) from automatically redirecting to /home after account switch."
+  },
+  "consent_title": {
+    "message": "Privacy Policy & Agreement"
+  },
+  "consent_agreement_title": {
+    "message": "Terms and Agreement"
+  },
+  "consent_intro": {
+    "message": "To use this extension, you must agree to the following terms and risk analysis. This extension aims to protect your browsing flow by preventing unwanted redirects."
+  },
+  "consent_policy_title": {
+    "message": "Privacy Policy"
+  },
+  "consent_policy_data": {
+    "message": "Data Usage: This extension saves its state (last visited URL) locally in your browser. No data is sent to external servers."
+  },
+  "consent_risk_title": {
+    "message": "Risk Analysis & Account Security"
+  },
+  "consent_risk_content": {
+    "message": "This extension does NOT manipulate the DOM or page content, which significantly reduces detection risk. However, automate-like navigation patterns might be monitored by X. Use at your own risk."
+  },
+  "consent_checkbox": {
+    "message": "I have read and agree to the Privacy Policy and Terms of Use."
+  },
+  "consent_button": {
+    "message": "Agree & Start Using"
+  },
+  "popup_status_label": {
+    "message": "Status: "
+  },
+  "popup_status_active": {
+    "message": "Active & Protected"
+  },
+  "popup_status_inactive": {
+    "message": "Inactive (Consent Required)"
+  },
+  "popup_open_consent": {
+    "message": "Privacy Policy & Terms"
+  },
+  "popup_download_logs": {
+    "message": "Download Debug Logs"
+  }
+}

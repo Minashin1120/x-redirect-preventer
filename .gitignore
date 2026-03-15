@@ -1,0 +1,10 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Debug logs
+x_redirect_logs_*.json
+
+# HAR files (contains sensitive data)
+*.har
+*.har.json

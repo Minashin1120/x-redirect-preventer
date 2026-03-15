@@ -1,0 +1,50 @@
+{
+  "extension_name": {
+    "message": "X アカウント遷移防止"
+  },
+  "extension_description": {
+    "message": "アカウント切り替え後に X (Twitter) が自動的に /home にリダイレクトするのを防ぎます。"
+  },
+  "consent_title": {
+    "message": "プライバシーポリシーと同意事項"
+  },
+  "consent_agreement_title": {
+    "message": "利用規約と同意"
+  },
+  "consent_intro": {
+    "message": "この拡張機能を使用するには、以下の規約とリスク分析に同意する必要があります。この拡張機能は、意図しないリダイレクトを防ぐことで、あなたのブラウジングフローを保護します。"
+  },
+  "consent_policy_title": {
+    "message": "プライバシーポリシー"
+  },
+  "consent_policy_data": {
+    "message": "データの使用: この拡張機能は、状態（最後に訪問したURL）をブラウザ内にローカルに保存します。外部サーバーにデータが送信されることはありません。"
+  },
+  "consent_risk_title": {
+    "message": "リスク分析とアカウントの安全性"
+  },
+  "consent_risk_content": {
+    "message": "この拡張機能は DOM やページコンテンツを操作しないため、検知リスクが大幅に軽減されています。ただし、自動化のようなナビゲーションパターンは X によって監視される可能性があります。自己責任で使用してください。"
+  },
+  "consent_checkbox": {
+    "message": "プライバシーポリシーと利用規約を読み、内容に同意します。"
+  },
+  "consent_button": {
+    "message": "同意して利用を開始する"
+  },
+  "popup_status_label": {
+    "message": "ステータス: "
+  },
+  "popup_status_active": {
+    "message": "有効・保護中"
+  },
+  "popup_status_inactive": {
+    "message": "無効（同意が必要です）"
+  },
+  "popup_open_consent": {
+    "message": "ポリシーと規約を表示"
+  },
+  "popup_download_logs": {
+    "message": "デバッグログを保存"
+  }
+}
