@@ -8,3 +8,4 @@ x_redirect_logs_*.json
 # HAR files (contains sensitive data)
 *.har
 *.har.json
+MAINTENANCE_GUIDE.md
