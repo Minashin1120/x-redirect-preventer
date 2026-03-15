@@ -8,3 +8,10 @@ x_redirect_logs_*.json
 # HAR files (contains sensitive data)
 *.har
 *.har.json
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
