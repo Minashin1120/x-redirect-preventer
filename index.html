@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - X Account Switch Redirect Preventer</title>
+    <style>
+        :root {
+            --primary: #1d9bf0;
+            --bg: #ffffff;
+            --text: #333333;
+            --alert-bg: #f8d7da;
+            --alert-border: #f5c6cb;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+        h1 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+            font-size: 28px;
+        }
+        h2 {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #000;
+        }
+        .alert {
+            background: var(--alert-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--alert-border);
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .alert a {
+            color: #721c24;
+            font-weight: bold;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        footer {
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>プライバシーポリシー</h1>
+    
+    <div class="alert">
+        <strong>Google Chrome Web Store Limited Use 要件への準拠声明:</strong><br>
+        「Google APIから受け取った情報の使用は、限定使用要件（Limited Use requirements）を含む<a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq" target="_blank">Chrome Web Store User Data Policy</a>に準拠します。」
+    </div>
+
+    <section>
+        <h2>1. データの収集と使用について</h2>
+        <p>当拡張機能（X Account Switch Redirect Preventer）は、ユーザーの個人情報、パスワード、閲覧履歴、またはその他の機密情報を収集し、外部サーバーへ送信、保存、または共有することは一切ありません。すべての処理はユーザーのブラウザ内でローカルに実行されます。</p>
+    </section>
+
+    <section>
+        <h2>2. 使用する権限とその目的</h2>
+        <ul>
+            <li><strong>storage:</strong> ユーザーが規約に同意したかどうかのステータスをローカルに保存するために使用します。</li>
+            <li><strong>webRequest:</strong> Xのアカウント切り替えAPI（switch.json）が呼び出されたことを検知し、その際のURLを一時的に保持するために使用します。</li>
+            <li><strong>webNavigation:</strong> アカウント切り替え直後のリダイレクトをインターセプトし、元のページに戻すために使用します。</li>
+            <li><strong>tabs:</strong> ページをリダイレクトから復帰させるために使用します。</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. データの第三者提供</h2>
+        <p>当拡張機能はデータを収集しないため、第三者にデータを提供、販売、または広告目的で使用することはありません。</p>
+    </section>
+
+    <section>
+        <h2>4. セキュリティ</h2>
+        <p>当拡張機能は、DOM操作を行わずブラウザの標準APIのみを使用することで、アカウントの安全性を最大限に考慮して設計されています。</p>
+    </section>
+
+    <footer>
+        <p>最終更新日: 2026年3月15日</p>
+        <p>© 2026 X Account Switch Redirect Preventer Developer</p>
+    </footer>
+</body>
+</html>
