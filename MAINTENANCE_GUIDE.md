@@ -40,7 +40,27 @@ zip -r release_v1.0.0.zip extension/
 - 本拡張機能は一切のデータを外部送信しません。
 - ユーザーから「ログイン情報が盗まれるのでは？」と質問された際は、ストアの説明文および `website/index.html` のポリシーを提示してください。
 
-## 5. 関連リソース
+## 5. 新しい環境（別のPCなど）でのGit設定
+
+環境が変わっても、以下のコマンドで継続して開発・プッシュが可能です。
+
+### 1. リポジトリの取得
+```bash
+git clone https://github.com/Minashin1120/x-redirect-preventer.git
+cd x-redirect-preventer
+```
+
+### 2. ID（ニックネーム）の再設定
+新しい端末では、忘れずに名前をセットしてください（本名漏洩防止）。
+```bash
+git config --local user.name "Minashin1120"
+git config --local user.email "minashin.official@gmail.com"
+```
+
+### 3. 認証（Personal Access Token）
+Gitのプッシュでパスワードを求められたら、GitHubの [Settings > Developer settings] から発行した **Personal Access Token (classic)** を使用してください（通常のログインパスワードではプッシュできません）。
+
+## 6. 関連リソース
 - **GitHub**: `https://github.com/Minashin1120/x-redirect-preventer`
 - **Policy Site**: `https://x-redirect-preventer-web.minashin1.pages.dev/`
 - **Debug Logs**: 拡張機能のポップアップ内「Download Debug Logs」からいつでも動作履歴を確認可能です。
