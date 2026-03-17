@@ -68,7 +68,7 @@ chrome.webRequest.onBeforeRequest.addListener(
             await detectSwitch(details.tabId, state.lastGoodUrl, "Web Request");
         }
     },
-    { urls: ["*://*.x.com/1.1/account/multi/switch.json*", "*://*.twitter.com/i/api/1.1/account/multi/switch.json*", "*://api.x.com/*", "*://api.twitter.com/*"] }
+    { urls: ["*://*.x.com/1.1/account/multi/switch.json*", "*://*.twitter.com/i/api/1.1/account/multi/switch.json*"] }
 );
 
 async function detectSwitch(tabId, returnUrl, source) {
