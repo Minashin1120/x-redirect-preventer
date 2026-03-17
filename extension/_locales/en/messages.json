@@ -46,5 +46,11 @@
   },
   "popup_download_logs": {
     "message": "Download Debug Logs"
+  },
+  "github_link_label": {
+    "message": "This project is Open Source"
+  },
+  "github_link_button": {
+    "message": "View on GitHub"
   }
 }

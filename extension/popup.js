@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const statusDiv = document.getElementById('status');
     const openBtn = document.getElementById('openConsent');
     const downloadBtn = document.getElementById('downloadLogs');
+    const githubBtn = document.getElementById('viewGithub');
 
     function updateStatus() {
         chrome.storage.local.get(['consented'], (result) => {
@@ -47,6 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (e) {
                 console.error('Download failed', e);
             }
+        });
+    }
+
+    if (githubBtn) {
+        githubBtn.addEventListener('click', () => {
+            chrome.tabs.create({ url: 'https://github.com/Minashin1120/x-redirect-preventer' });
         });
     }
 
