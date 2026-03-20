@@ -40,10 +40,12 @@ chrome.webNavigation.onCommitted.addListener(async (details) => {
         const isHome = !!url.match(/https?:\/\/(x|twitter)\.com\/home/);
         const state = await getTabState(details.tabId);
         
-        if (!isHome) {
+        if (!isHome || !state.switchPending) {
             await setTabState(details.tabId, { lastGoodUrl: url });
-            logEvent({ event: 'TRACK_URL_NAV', tabId: details.tabId, url });
-        } else {
+            logEvent({ event: 'TRACK_URL_NAV', tabId: details.tabId, url, isHome });
+        }
+        
+        if (isHome) {
             logEvent({ event: 'HOME_LOADED_NAV', tabId: details.tabId, pending: !!state.switchPending });
             // Immediate check for pending switch
             if (state.switchPending && (Date.now() - state.switchPending < 30000)) {
@@ -131,10 +133,12 @@ chrome.runtime.onMessage.addListener(async (msg, sender) => {
         const urlRequest = msg.newUrl || msg.url;
         const isHome = !!urlRequest.match(/https?:\/\/(x|twitter)\.com\/home/);
         
-        if (!isHome) {
+        if (!isHome || !state.switchPending) {
             await setTabState(tabId, { lastGoodUrl: urlRequest });
-            if (msg.type === 'URL_CHANGE_SPA') logEvent({ event: 'TRACK_URL_SPA', tabId, url: urlRequest });
-        } else {
+            if (msg.type === 'URL_CHANGE_SPA') logEvent({ event: 'TRACK_URL_SPA', tabId, url: urlRequest, isHome });
+        }
+        
+        if (isHome) {
             const state = await getTabState(tabId);
             logEvent({ event: 'HOME_DETECTED_CS', tabId, type: msg.type, pending: !!state.switchPending });
             if (state.switchPending && (Date.now() - state.switchPending < 30000)) {
